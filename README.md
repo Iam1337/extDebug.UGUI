@@ -7,11 +7,11 @@ Created by [iam1337](https://github.com/iam1337)
 [![⚙ Build and Release](https://github.com/Iam1337/extDebug.UGUI/actions/workflows/ci.yml/badge.svg)](https://github.com/Iam1337/extDebug.UGUI/actions/workflows/ci.yml)
 [![](https://img.shields.io/github/license/iam1337/extDebug.UGUI.svg)](https://github.com/Iam1337/extDebug.UGUI/blob/master/LICENSE)
 
-### What Is extDebug.UGUI?
+## Introduction
 
 This is an extension to support Unity UI and TextMeshPro in [extDebug](https://github.com/Iam1337/extDebug).
 
-### Installation:
+## Installation:
 
 Be sure to install [extDebug](https://github.com/Iam1337/extDebug) before installing.
 
