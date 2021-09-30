@@ -17,7 +17,7 @@ Be sure to install [extDebug](https://github.com/Iam1337/extDebug) before instal
 
 **Old school**
 
-Just copy the [Assets/extDebug](Assets/extDebug) folder into your Assets directory within your Unity project, or [download latest extDebug.unitypackage](https://github.com/iam1337/extDebug/releases).
+Just copy the [Assets/extDebug.UGUI](Assets/extDebug.UGUI) folder into your Assets directory within your Unity project, or [download latest extDebug.UGUI.unitypackage](https://github.com/iam1337/extDebug.UGUI/releases).
 
 **Package Manager**
 
@@ -25,7 +25,7 @@ Project supports Unity Package Manager. To install the project as a Git package 
 
 1. In Unity, open **Window > Package Manager**.
 2. Press the **+** button, choose **"Add package from git URL..."**
-3. Enter "https://github.com/iam1337/extDebug.git#upm" and press Add.
+3. Enter "https://github.com/iam1337/extDebug.UGUI.git#upm" and press Add.
 
 ## extDebug.Menu.UGUI - Debug Menu UGUI Render
 To change the default IMGUI render on Unity UI, you need to set instance of `DMUGUIRender` in `DM.Render`.
