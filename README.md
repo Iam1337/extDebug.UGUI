@@ -1,5 +1,5 @@
 
-# extDebug - Debug Tools for Unity
+# extDebug.UGUI - Unity UI for extDebug
 
 Created by [iam1337](https://github.com/iam1337)
 
