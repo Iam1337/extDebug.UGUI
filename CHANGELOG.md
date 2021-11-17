@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.0.0...v1.0.1) (2021-11-17)
+
+
+### Bug Fixes
+
+* **manifest:** update extDebug source to openupm package ([72c63d1](https://github.com/Iam1337/extDebug.UGUI/commit/72c63d1d50ae0ab7bb00f2b0328fb86f493c6a4a))
+
 # 1.0.0 (2021-09-30)
 
 
