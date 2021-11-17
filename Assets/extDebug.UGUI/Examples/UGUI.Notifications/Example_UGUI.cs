@@ -1,6 +1,7 @@
 /* Copyright (c) 2021 dr. ext (Vladimir Sigalkin) */
 
 using UnityEngine;
+using UnityEngine.Serialization;
 
 using extDebug.Menu;
 using extDebug.Notifications;
@@ -12,11 +13,13 @@ namespace extDebug.Examples.Notifications.UGUI
 	{
 		#region Public Vars
 
-		public DNUGUIAnimation NotifyAnimation;
+		[FormerlySerializedAs("NotifyAnimation")] 
+		public RenderType RenderType;
 
 		public RectTransform NotifyAnchor;
 
-		public DNUGUIItem NotifyPrefab;
+		[FormerlySerializedAs("NotifyPrefab")] 
+		public NoticeItem NoticePrefab;
 
 		#endregion
 		
@@ -32,7 +35,7 @@ namespace extDebug.Examples.Notifications.UGUI
 
 		private void Start()
 		{
-			DN.Render = new DNUGUIRender(NotifyAnchor, NotifyPrefab, NotifyAnimation);
+			DN.Render = new NoticeRender(NotifyAnchor, NoticePrefab, RenderType);
 
 			DM.Add("Simple Notice", action => DN.Notify("Simple notification"), order: 0);
 			

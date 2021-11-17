@@ -10,8 +10,7 @@ using TextMeshPro = TMPro.TextMeshProUGUI;
 
 namespace extDebug.Notifications.UGUI
 {
-	// TODO: Move to extDebug.UGUI repo
-	public class DNUGUIItem : MonoBehaviour
+	public class NoticeItem : MonoBehaviour
 	{
 		#region Public Vars
 

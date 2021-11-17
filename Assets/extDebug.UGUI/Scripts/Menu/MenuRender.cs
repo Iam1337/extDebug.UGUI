@@ -11,8 +11,7 @@ using TextMeshPro = TMPro.TextMeshProUGUI;
 
 namespace extDebug.Menu.UGUI
 {
-	// TODO: Move to extDebug.UGUI repo
-	public class DMUGUIRender : IDMRender, IDMRender_Update
+	public class MenuRender : IDMRender, IDMRender_Update
 	{
 		#region Private Vars
 		
@@ -30,9 +29,9 @@ namespace extDebug.Menu.UGUI
 
 		#region Constructor
 
-		public DMUGUIRender(GameObject menuObject, Text menuLabel) : this(menuObject) => _label_Text = menuLabel;
+		public MenuRender(GameObject menuObject, Text menuLabel) : this(menuObject) => _label_Text = menuLabel;
 
-		public DMUGUIRender(GameObject menuObject, TextMeshPro menuLabel) : this(menuObject) => _label_TextMeshPro = menuLabel;
+		public MenuRender(GameObject menuObject, TextMeshPro menuLabel) : this(menuObject) => _label_TextMeshPro = menuLabel;
 
 		#endregion
 
@@ -105,7 +104,7 @@ namespace extDebug.Menu.UGUI
 
 		#region Private Methods
 		
-		private DMUGUIRender(GameObject menuObject) => _menuObject = menuObject;
+		private MenuRender(GameObject menuObject) => _menuObject = menuObject;
 		
 		private void CalculateLengths(DMBranch branch, IReadOnlyList<DMItem> items, int space, out int fullLength, out int maxNameLength, out int maxValueLength)
 		{

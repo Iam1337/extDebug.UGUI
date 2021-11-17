@@ -4,15 +4,13 @@ using UnityEngine;
 
 namespace extDebug.Notifications.UGUI
 {
-	// TODO: Rename
-	public enum DNUGUIAnimation
+	public enum RenderType
 	{
 		Default,
 		VR
 	}
 	
-	// TODO: Move to extDebug.UGUI repo
-	public class DNUGUIRender : IDNRender
+	public class NoticeRender : IDNRender
 	{
 		#region Public Vars
 		
@@ -26,9 +24,9 @@ namespace extDebug.Notifications.UGUI
 
 		private readonly RectTransform _noticeAnchor;
 		
-		private readonly DNUGUIItem _noticePrefab;
+		private readonly NoticeItem _noticePrefab;
 
-		private readonly DNUGUIAnimation _animation;
+		private readonly RenderType _type;
 
 		private Vector2 _previousSize;
 		
@@ -36,11 +34,11 @@ namespace extDebug.Notifications.UGUI
 
 		#region Public Methods
 
-		public DNUGUIRender(RectTransform noticeAnchor, DNUGUIItem noticePrefab, DNUGUIAnimation animation = DNUGUIAnimation.Default)
+		public NoticeRender(RectTransform noticeAnchor, NoticeItem noticePrefab, RenderType type = RenderType.Default)
 		{
 			_noticeAnchor = noticeAnchor;
 			_noticePrefab = noticePrefab;
-			_animation = animation;
+			_type = type;
 		}
 
 		#endregion
@@ -52,12 +50,12 @@ namespace extDebug.Notifications.UGUI
 			var noticeData = Object.Instantiate(_noticePrefab, _noticeAnchor);
 			noticeData.Text = notice.Text;
 			
-			if (_animation == DNUGUIAnimation.Default)
+			if (_type == RenderType.Default)
 			{
 				noticeData.Position = new Vector2(noticeData.Width, -ItemsOffset.y - currentHeight - (_previousSize.y + ItemSpace));
 				noticeData.Alpha = 1f;
 			}
-			else if (_animation == DNUGUIAnimation.VR)
+			else if (_type == RenderType.VR)
 			{
 				noticeData.Position = new Vector2(-noticeData.Width * 2,  currentHeight + _previousSize.y + ItemSpace);
 				noticeData.Alpha = 0f;
@@ -68,13 +66,13 @@ namespace extDebug.Notifications.UGUI
 
 		void IDNRender.RemoveNotice(DNNotice notice)
 		{
-			if (notice.Data is DNUGUIItem noticeData)
+			if (notice.Data is NoticeItem noticeData)
 				Object.Destroy(noticeData.gameObject);
 		}
 
 		void IDNRender.Repaint(DNNotice notice, float timeLeft, ref float currentHeight)
 		{
-			if (!(notice.Data is DNUGUIItem noticeData))
+			if (notice.Data is not NoticeItem noticeData)
 				return;
 
 			var size = noticeData.Size;
@@ -88,14 +86,14 @@ namespace extDebug.Notifications.UGUI
 			var targetX = 0f;
 			var targetY = 0f;
 
-			targetX = _animation == DNUGUIAnimation.Default ? -ItemsOffset.x : 0;
-			targetY = _animation == DNUGUIAnimation.Default ? height - currentHeight - ItemsOffset.y : height + currentHeight;
+			targetX = _type == RenderType.Default ? -ItemsOffset.x : 0;
+			targetY = _type == RenderType.Default ? height - currentHeight - ItemsOffset.y : height + currentHeight;
 
 			// Calculate targets
 			if (timeLeft < 0.2f) targetX += width * 2;
 			else if (timeLeft < 0.7f) targetX -= 50;
 
-			if (_animation == DNUGUIAnimation.VR)
+			if (_type == RenderType.VR)
 			{
 				if (timeLeft > 0.2f)
 				{

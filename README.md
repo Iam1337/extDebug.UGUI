@@ -73,7 +73,7 @@ GameObject MenuObject; // extDebug Unity UI Root instance. The object to hide wh
 Text MenuText;         // Unity UI Text instance. The object in which the menu text will be displayed.
 
 // Initialize Unity UI render
-DM.Render = new DMUGUIRender(MenuObject, MenuText);
+DM.Render = new MenuRender(MenuObject, MenuText);
 ```
 
 **Unity UI and TextMeshPro**<br>
@@ -82,7 +82,7 @@ GameObject MenuObject; // extDebug Unity UI Root instance. The object to hide wh
 TextMeshProUGUI MenuText; // TextMeshPro UI Text instance. The object in which the menu text will be displayed.
 
 // Initialize Unity UI render
-DM.Render = new DMUGUIRender(MenuObject, MenuText);
+DM.Render = new MenuRender(MenuObject, MenuText);
 ```
 
 ## extDebug.Notifications.UGUI - Debug Notifications UGUI Render
@@ -95,10 +95,10 @@ Full examples you can find in [Examples/UGUI.Notifications](Assets/extDebug.UGUI
 **Unity UI or TextMeshPro**<br>
 ```C#
 RectTransform NotifyAnchor; // Ref to the transform of the component on which the notification will be instantiated.
-DNUGUIItem NotifyPrefab; // Notification prefab. Inside this prefab, you can choose between Unity UI and TextMeshPro
+NoticeItem NotifyPrefab; // Notification prefab. Inside this prefab, you can choose between Unity UI and TextMeshPro
 
 // Initialize Unity UI render
-DN.Render = new DNUGUIRender(NotifyAnchor, NotifyPrefab);
+DN.Render = new NoticeRender(NotifyAnchor, NotifyPrefab);
 ```
 
 ## Author Contacts:

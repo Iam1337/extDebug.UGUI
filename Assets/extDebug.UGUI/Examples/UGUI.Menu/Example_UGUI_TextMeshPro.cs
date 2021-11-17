@@ -78,7 +78,7 @@ namespace extDebug.Examples.Menu
 			void ExampleAction(DMAction action) => Debug.Log(action.Data);
 			
 			// Initialize TextMeshPro render
-			DM.Render = new DMUGUIRender(MenuObject, MenuText);
+			DM.Render = new MenuRender(MenuObject, MenuText);
 
 			// Simple Menus
 			DM.Add("Simple Menus/Action", action => Debug.Log("Hello/Action"), order: 0);
