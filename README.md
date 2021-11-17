@@ -8,6 +8,13 @@ Created by [iam1337](https://github.com/iam1337)
 [![openupm](https://img.shields.io/npm/v/com.iam1337.extdebug.ugui?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.iam1337.extdebug.ugui/)
 [![](https://img.shields.io/github/license/iam1337/extDebug.UGUI.svg)](https://github.com/Iam1337/extDebug.UGUI/blob/master/LICENSE)
 
+### Table of Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [extDebug.Menu.UGUI](#extdebugmenuugui---debug-menu-ugui-render)
+- [extDebug.Notifications.UGUI](#extdebugnotificationsugui---debug-notifications-ugui-render)
+- [Author Contacts](#author-contacts)
+
 ## Introduction
 
 This is an extension to support Unity UI and TextMeshPro in [extDebug](https://github.com/Iam1337/extDebug).
