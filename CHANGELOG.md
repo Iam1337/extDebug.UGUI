@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.0.1...v1.1.0) (2021-11-17)
+
+
+### Features
+
+* **UGUI:** renamed DMUGUIRender, DNUGUIRender, DNUGUIItem, DNUGUIAnimation ([ade3c15](https://github.com/Iam1337/extDebug.UGUI/commit/ade3c15834ec0a6e631ad1eb8dd5ce07d02ec3e2))
+
 ## [1.0.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.0.0...v1.0.1) (2021-11-17)
 
 
