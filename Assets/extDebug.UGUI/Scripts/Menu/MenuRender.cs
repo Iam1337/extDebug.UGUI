@@ -95,9 +95,9 @@ namespace extDebug.Menu.UGUI
 				_label_Text.text = _builder.ToString();
 		}
 
-		void IDMRender_Update.Update()
+		void IDMRender_Update.Update(bool isVisible)
 		{
-			_menuObject.SetActive(DM.IsVisible);
+			_menuObject.SetActive(isVisible);
 		}
 		
 		#endregion
