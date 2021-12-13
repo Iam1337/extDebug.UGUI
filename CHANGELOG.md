@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.1.0...v1.2.0) (2021-12-13)
+
+
+### Features
+
+* **UGUI:** add 1.8 version support ([f1dda8e](https://github.com/Iam1337/extDebug.UGUI/commit/f1dda8e536a82ae8dff8108931abf7b7a3cd9ec9))
+
 # [1.1.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.0.1...v1.1.0) (2021-11-17)
 
 
