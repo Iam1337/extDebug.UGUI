@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.2.0...v1.2.1) (2021-12-14)
+
+
+### Bug Fixes
+
+* **Package:** dependency version update ([82cbbf1](https://github.com/Iam1337/extDebug.UGUI/commit/82cbbf13aa834e64d04df6a63b62fe2c464f2c2d))
+
 # [1.2.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.1.0...v1.2.0) (2021-12-13)
 
 
