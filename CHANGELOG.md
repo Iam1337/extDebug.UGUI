@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/Iam1337/extDebug.UGUI/compare/v1.2.1...v1.2.2) (2022-01-07)
+
+
+### Bug Fixes
+
+* **ci:** update semantic-release settings ([1766fd7](https://github.com/Iam1337/extDebug.UGUI/commit/1766fd73660da69a3c99e2b974912767eea3ed6b))
+
 ## [1.2.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.2.0...v1.2.1) (2021-12-14)
 
 
