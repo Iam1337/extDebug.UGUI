@@ -74,9 +74,6 @@ namespace extDebug.Examples.Menu
 
 		private void Start()
 		{
-			string GetName(Component component) => $"{component.name} ({component.GetType().Name})";
-			void ExampleAction(DMAction action) => Debug.Log(action.Data);
-			
 			// Initialize TextMeshPro render
 			DM.Render = new MenuRender(MenuObject, MenuText);
 
@@ -94,15 +91,6 @@ namespace extDebug.Examples.Menu
 			DM.Add("Simple Menus/Bool", () => _bool, v => _bool = v, order: 10);
 			DM.Add("Simple Menus/Enum", () => _enum, v => _enum = v, order: 11);
 			DM.Add("Simple Menus/Flags", () => _flags, v => _flags = v, order: 12);
-			
-			// Requests Menus
-			// DMBranchRequest
-			var branch = DM.Add("Requests Menus/Branch", order: 0).Add(FindObjectsOfType<Component>, GetName);
-			branch.Add("Debug.Log", action => { Debug.Log(action.Data); });
-			branch.Add("Object.Destroy", action => { Destroy((Component)action.Data); });
-
-			// DMActionRequest
-			DM.Add("Requests Menus/Actions", order: 1).Add(FindObjectsOfType<Component>, ExampleAction);
 
 			DM.Open();
 		}
