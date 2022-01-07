@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.2.2...v1.3.0) (2022-01-07)
+
+
+### Bug Fixes
+
+* **UGUI:** fix package.json ([a00e6d2](https://github.com/Iam1337/extDebug.UGUI/commit/a00e6d2b4aa3ade2ee9d6359a9067c08476bd91d))
+
+
+### Features
+
+* **UGUI:** update examples ([6eff720](https://github.com/Iam1337/extDebug.UGUI/commit/6eff7208b62aaa3052ee05ea1136cd7e0f653fc4))
+* **UGUI:** update extDebug verstion ([64fc946](https://github.com/Iam1337/extDebug.UGUI/commit/64fc94688d69f200c8b9600b8735cc604e5f4be8))
+* **UGUI:** update package.json ([534c109](https://github.com/Iam1337/extDebug.UGUI/commit/534c1097d7e142ceb6c437fa3fbd96daa393e5ad))
+
 ## [1.2.2](https://github.com/Iam1337/extDebug.UGUI/compare/v1.2.1...v1.2.2) (2022-01-07)
 
 
