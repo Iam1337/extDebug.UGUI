@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.iam1337.extdebug": {
-      "version": "1.12.1",
+      "version": "1.12.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://package.openupm.com"
+      "url": "http://package.openupm.com"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
