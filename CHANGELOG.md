@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.3.1...v1.4.0) (2022-01-17)
+
+
+### Features
+
+* **Menu:** added description in render ([708288b](https://github.com/Iam1337/extDebug.UGUI/commit/708288be1d80baa282504174047e79790f3e4166))
+
 ## [1.3.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.3.0...v1.3.1) (2022-01-07)
 
 # [1.3.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.2.2...v1.3.0) (2022-01-07)
