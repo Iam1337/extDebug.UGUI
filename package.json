@@ -1,7 +1,7 @@
 {
   "name": "com.iam1337.extdebug.ugui",
   "displayName": "extDebug.UGUI",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "unity": "2021.1",
   "description": "Extension to support Unity UI and TextMeshPro in extDebug",
   "license": "MIT",
