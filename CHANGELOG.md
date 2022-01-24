@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.4.0...v1.4.1) (2022-01-24)
+
+
+### Bug Fixes
+
+* **ci:** added self-hosted npm mirror ([bb9a4f0](https://github.com/Iam1337/extDebug.UGUI/commit/bb9a4f010f5c18f7d20b4a2291be930165133a28))
+
 # [1.4.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.3.1...v1.4.0) (2022-01-17)
 
 
