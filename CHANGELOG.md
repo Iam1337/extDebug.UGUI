@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/Iam1337/extDebug.UGUI/compare/v1.4.1...v1.4.2) (2022-01-24)
+
+
+### Bug Fixes
+
+* **ci:** add publish check ([6a153e2](https://github.com/Iam1337/extDebug.UGUI/commit/6a153e20aa29cc8d400e0ebbc23649ec32a82af5))
+
 ## [1.4.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.4.0...v1.4.1) (2022-01-24)
 
 
