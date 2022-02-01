@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.5.0...v1.6.0) (2022-02-01)
+
+
+### Features
+
+* **Menu:** added enables/disables state support ([79a8567](https://github.com/Iam1337/extDebug.UGUI/commit/79a8567f55919d6d9cb12f085339d732d887e188))
+
 # [1.5.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.4.2...v1.5.0) (2022-02-01)
 
 
