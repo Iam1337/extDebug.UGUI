@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.4.2...v1.5.0) (2022-02-01)
+
+
+### Features
+
+* **project:** update unity version ([0bb7a3c](https://github.com/Iam1337/extDebug.UGUI/commit/0bb7a3c08ed19970654b11c443c601189bf7a272))
+
 ## [1.4.2](https://github.com/Iam1337/extDebug.UGUI/compare/v1.4.1...v1.4.2) (2022-01-24)
 
 
