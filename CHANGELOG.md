@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.6.0...v1.6.1) (2022-03-19)
+
+
+### Bug Fixes
+
+* added destroy notice item support ([788ba29](https://github.com/Iam1337/extDebug.UGUI/commit/788ba29be9136ef51afa6ebf0f9926c61e6df0e9))
+
 # [1.6.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.5.0...v1.6.0) (2022-02-01)
 
 
