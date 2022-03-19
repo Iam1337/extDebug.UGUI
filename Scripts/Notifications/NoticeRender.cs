@@ -48,6 +48,7 @@ namespace extDebug.Notifications.UGUI
 		void IDNRender.SetupNotice(DNNotice notice, float currentHeight)
 		{
 			var noticeData = Object.Instantiate(_noticePrefab, _noticeAnchor);
+			noticeData.Notice = notice;
 			noticeData.Text = notice.Text;
 			
 			if (_type == RenderType.Default)
@@ -103,7 +104,6 @@ namespace extDebug.Notifications.UGUI
 				{
 					noticeData.Alpha -= Time.unscaledDeltaTime * 4.5f;
 				}
-				
 			}
 
 			// Calculate new positions

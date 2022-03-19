@@ -44,6 +44,9 @@ namespace extDebug.Notifications.UGUI
 
 		[NonSerialized]
 		public Vector2 Velocity;
+
+		[NonSerialized]
+		public DNNotice Notice;
 		
 		#endregion
 
@@ -63,6 +66,16 @@ namespace extDebug.Notifications.UGUI
 		[FormerlySerializedAs("Label_TextMeshPro")] 
 		[SerializeField]
 		private TextMeshPro _label_TextMeshPro;
+
+		#endregion
+
+		#region Unity Methods
+
+		private void OnDestroy()
+		{
+			if (Notice.Data is NoticeItem item && item == this)
+				Notice.Data = null;
+		}
 
 		#endregion
 	}
