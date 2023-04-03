@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.6.2...v1.7.0) (2023-04-03)
+
+
+### Features
+
+* **Menu:** added logs support ([a5b5d69](https://github.com/Iam1337/extDebug.UGUI/commit/a5b5d69ea624ddb9bd4b62738e77d1c3f833e255))
+
 ## [1.6.2](https://github.com/Iam1337/extDebug.UGUI/compare/v1.6.1...v1.6.2) (2023-04-03)
 
 
