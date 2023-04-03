@@ -41,7 +41,7 @@ namespace extDebug.Menu.UGUI
 			const string kPrefix = " ";
 			const string kPrefix_Selected = ">";
 			const string kSpace = "  ";
-			const char kHorizontalChar = '─';
+			const char kHorizontalChar = '-';
 
 			CalculateLengths(branch, items, kSpace.Length, 
 				out var fullLength, 
