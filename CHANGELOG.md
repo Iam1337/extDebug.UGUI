@@ -1,3 +1,12 @@
+## [1.6.2](https://github.com/Iam1337/extDebug.UGUI/compare/v1.6.1...v1.6.2) (2023-04-03)
+
+
+### Bug Fixes
+
+* **ci:** changed horizontal char ([4d8b7ca](https://github.com/Iam1337/extDebug.UGUI/commit/4d8b7ca350ee55b1ce5df104e21d85909c5104bc))
+* **ci:** fixed ci version ([62231c1](https://github.com/Iam1337/extDebug.UGUI/commit/62231c1b1e7a602dd5c3c8a1ecd1b72bb93a7145))
+* **ci:** remove create package plugin ([96d041a](https://github.com/Iam1337/extDebug.UGUI/commit/96d041aaa1e8174efb196a350323340377634bfa))
+
 ## [1.6.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.6.0...v1.6.1) (2022-03-19)
 
 
