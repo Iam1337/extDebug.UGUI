@@ -36,7 +36,7 @@ namespace extDebug.Menu.UGUI
 
 		#region IDMRender Methods
 
-		void IDMRender.Repaint(DMBranch branch, IReadOnlyList<DMItem> items)
+		void IDMRender.Repaint(IDMBranch branch, IReadOnlyList<DMItem> items)
 		{
 			const string kPrefix = " ";
 			const string kPrefix_Selected = ">";
@@ -76,9 +76,13 @@ namespace extDebug.Menu.UGUI
 				var value = item.Value;
 				var description = item.Description;
 
-				if (item is DMBranch)
+				if (item is IDMBranch)
 					name += "...";
-
+                
+                // little hack
+                if (branch is DMLogs)
+                    maxValueLength = 0;
+                
 				_builder.AppendFormat($"{prefix}<color=#{ColorUtility.ToHtmlStringRGB(item.NameColor * alpha)}>{{0,{-maxNameLength}}}</color>", name);
 				_builder.AppendFormat($"{kSpace}<color=#{ColorUtility.ToHtmlStringRGB(item.ValueColor * alpha)}>{{0,{maxValueLength}}}</color>", value);
 				_builder.AppendFormat($"{kSpace}<color=#{ColorUtility.ToHtmlStringRGB(item.DescriptionColor * alpha)}>{{0,{-maxDescriptionLength}}}</color>", description);
@@ -105,7 +109,7 @@ namespace extDebug.Menu.UGUI
 
 		private MenuRender(GameObject menuObject) => _menuObject = menuObject;
 
-		private void CalculateLengths(DMBranch branch, IReadOnlyList<DMItem> items, int spaceLength, out int fullLength, out int maxNameLength, out int maxValueLength, out int maxDescriptionLength)
+		private void CalculateLengths(IDMBranch branch, IReadOnlyList<DMItem> items, int spaceLength, out int fullLength, out int maxNameLength, out int maxValueLength, out int maxDescriptionLength)
 		{
 			maxNameLength = 0;
 			maxValueLength = 0;
@@ -119,9 +123,9 @@ namespace extDebug.Menu.UGUI
 				var valueLength = item.Value.Length;
 				var descriptionLength = item.Description.Length;
 
-				if (item is DMBranch)
+				if (item is IDMBranch)
 					nameLength += 3;
-
+                
 				maxNameLength = Math.Max(maxNameLength, nameLength);
 				maxValueLength = Math.Max(maxValueLength, valueLength);
 				maxDescriptionLength = Math.Max(maxDescriptionLength, descriptionLength);
