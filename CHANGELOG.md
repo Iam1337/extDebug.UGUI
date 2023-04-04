@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.7.0...v1.7.1) (2023-04-04)
+
+
+### Bug Fixes
+
+* **Menu:** fixed logs alpha ([f7edfe4](https://github.com/Iam1337/extDebug.UGUI/commit/f7edfe477d869a1447abfd8e1f703cf6d26d70ea))
+
 # [1.7.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.6.2...v1.7.0) (2023-04-03)
 
 
