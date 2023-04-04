@@ -81,7 +81,10 @@ namespace extDebug.Menu.UGUI
                 
                 // little hack
                 if (branch is DMLogs)
+                {
+                    alpha = 1f;
                     maxValueLength = 0;
+                }
                 
 				_builder.AppendFormat($"{prefix}<color=#{ColorUtility.ToHtmlStringRGB(item.NameColor * alpha)}>{{0,{-maxNameLength}}}</color>", name);
 				_builder.AppendFormat($"{kSpace}<color=#{ColorUtility.ToHtmlStringRGB(item.ValueColor * alpha)}>{{0,{maxValueLength}}}</color>", value);
