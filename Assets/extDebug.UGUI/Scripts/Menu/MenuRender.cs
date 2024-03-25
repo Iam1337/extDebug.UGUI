@@ -36,14 +36,14 @@ namespace extDebug.Menu.UGUI
 
 		#region IDMRender Methods
 
-		void IDMRender.Repaint(IDMBranch branch, IReadOnlyList<DMItem> items)
+		void IDMRender.Repaint(IDMBranch itemsContainer, IReadOnlyList<DMItem> items)
 		{
 			const string kPrefix = " ";
 			const string kPrefix_Selected = ">";
 			const string kSpace = "  ";
 			const char kHorizontalChar = '-';
 
-			CalculateLengths(branch, items, kSpace.Length, 
+			CalculateLengths(itemsContainer, items, kSpace.Length, 
 				out var fullLength, 
 				out var maxNameLength, 
 				out var maxValueLength, 
@@ -51,18 +51,28 @@ namespace extDebug.Menu.UGUI
 
 			var order = -1;
 			var lineLength = fullLength + kPrefix.Length;
+			
+			var pageInfo = string.Empty;
+			var hasPage = itemsContainer.PageSize > 0;
+			if (hasPage)
+			{
+				pageInfo = $"{itemsContainer.PageStart}-{itemsContainer.PageEnd} of {itemsContainer.ItemsCount}";
+				lineLength = Mathf.Max(pageInfo.Length, lineLength);
+				items = itemsContainer.GetPageItems();
+			}
+			
 			var lineEmpty = new string(kHorizontalChar, lineLength);
 
 			// header
 			_builder.Clear();
-			_builder.AppendFormat($"{kPrefix}<color=#{ColorUtility.ToHtmlStringRGB(branch.NameColor)}>{{0,{-fullLength}}}</color>{Environment.NewLine}", branch.Name);
+			_builder.AppendFormat($"{kPrefix}<color=#{ColorUtility.ToHtmlStringRGB(itemsContainer.NameColor)}>{{0,{-fullLength}}}</color>{Environment.NewLine}", itemsContainer.Name);
 			_builder.AppendLine(lineEmpty);
 
 			// items
 			for (var i = 0; i < items.Count; i++)
 			{
 				var item = items[i];
-				var selected = item == branch.Current;
+				var selected = item == itemsContainer.Current;
 				var prefix = selected ? kPrefix_Selected : kPrefix;
 				var alpha = item.IsEnabled() ? (selected ? 1 : 0.75f) : 0.50f;
 
@@ -80,7 +90,7 @@ namespace extDebug.Menu.UGUI
 					name += "...";
                 
                 // little hack
-                if (branch is DMLogs)
+                if (itemsContainer is DMLogs)
                 {
                     alpha = 1f;
                     maxValueLength = 0;
@@ -92,7 +102,14 @@ namespace extDebug.Menu.UGUI
 				_builder.Append(Environment.NewLine);
 			}
 
-			_builder.Remove(_builder.Length - Environment.NewLine.Length, Environment.NewLine.Length);
+			if (hasPage)
+			{
+				_builder.AppendFormat( new string(kHorizontalChar, Mathf.Max(0, lineLength - pageInfo.Length - 1)) + " {0}", pageInfo);
+			}
+			else
+			{
+				_builder.Remove(_builder.Length - Environment.NewLine.Length, Environment.NewLine.Length);
+			}
 
 			// set value in text components
 			if (_label_TextMeshPro != null)
@@ -112,12 +129,12 @@ namespace extDebug.Menu.UGUI
 
 		private MenuRender(GameObject menuObject) => _menuObject = menuObject;
 
-		private void CalculateLengths(IDMBranch branch, IReadOnlyList<DMItem> items, int spaceLength, out int fullLength, out int maxNameLength, out int maxValueLength, out int maxDescriptionLength)
+		private void CalculateLengths(IDMBranch itemsContainer, IReadOnlyList<DMItem> items, int spaceLength, out int fullLength, out int maxNameLength, out int maxValueLength, out int maxDescriptionLength)
 		{
 			maxNameLength = 0;
 			maxValueLength = 0;
 			maxDescriptionLength = 0;
-			fullLength = branch.Name.Length;
+			fullLength = itemsContainer.Name.Length;
 
 			for (var i = 0; i < items.Count; i++)
 			{
@@ -128,12 +145,13 @@ namespace extDebug.Menu.UGUI
 
 				if (item is IDMBranch)
 					nameLength += 3;
-                
+
 				maxNameLength = Math.Max(maxNameLength, nameLength);
 				maxValueLength = Math.Max(maxValueLength, valueLength);
 				maxDescriptionLength = Math.Max(maxDescriptionLength, descriptionLength);
 			}
 
+			
 			fullLength = Math.Max(fullLength, maxNameLength + spaceLength + maxValueLength + spaceLength + maxDescriptionLength);
 		}
 
