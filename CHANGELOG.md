@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.7.1...v1.8.0) (2024-03-25)
+
+
+### Features
+
+* added pagination support ([8e1c368](https://github.com/Iam1337/extDebug.UGUI/commit/8e1c368877a26d1ec640f4b5519f26a9770637fb))
+
 ## [1.7.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.7.0...v1.7.1) (2023-04-04)
 
 
