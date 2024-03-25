@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.8.0...v1.8.1) (2024-03-25)
+
+
+### Bug Fixes
+
+* update package dependecy ([c02324f](https://github.com/Iam1337/extDebug.UGUI/commit/c02324f29b3a7f68a6ae6c0fe0efd789b674a0b6))
+
 # [1.8.0](https://github.com/Iam1337/extDebug.UGUI/compare/v1.7.1...v1.8.0) (2024-03-25)
 
 
