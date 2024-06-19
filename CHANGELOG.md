@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/Iam1337/extDebug.UGUI/compare/v1.8.1...v1.8.2) (2024-06-19)
+
+
+### Bug Fixes
+
+* removed dependencies ([b4f7087](https://github.com/Iam1337/extDebug.UGUI/commit/b4f7087271e0837743029b4cd2b5225cb2664275))
+
 ## [1.8.1](https://github.com/Iam1337/extDebug.UGUI/compare/v1.8.0...v1.8.1) (2024-03-25)
 
 
